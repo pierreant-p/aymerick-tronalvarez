@@ -1,0 +1,510 @@
+:root {
+    --white: #FFFFFF;
+    --yellow: #FFCD5A;
+    --orange: #FFA500;
+    --dark-gray: #222326;
+    --light-gray: #303134;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--dark-gray);
+    font-family: 'Hind', sans-serif;
+    color: var(--white);
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 94px;
+    line-height: 125px;
+    letter-spacing: -2.7px;
+    color: var(--yellow);
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--yellow);
+    letter-spacing: -1px;
+    line-height: 59px;
+    font-size: 44px;
+    font-weight: 900;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+h3 {
+    color: var(--yellow);
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.wrapper {
+    padding: 0 96px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 96px;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 30px;
+    line-height: 40px;
+    color: var(--yellow);
+}
+
+.nav {
+    flex-grow: 1;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav li {
+    margin-left: 24px;
+
+}
+
+.nav li a {
+    display: inline-block;
+    position: relative;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+    color: rgba(246, 234, 227, 0.75265);
+    transition: color 200ms ease-in-out;
+}
+
+.nav li a:hover,
+.nav li a:active {
+    color: #F6EAE3;
+}
+
+.nav li a::after {
+    content: " ";
+    display: block;
+    background-color: transparent;
+    transition: background-color 200ms ease-in-out;
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 4px;
+    margin-top: 3px;
+    margin-left: calc(50% - 2px);
+}
+
+.nav li a:hover::after,
+.nav li a:active::after {
+    background-color: var(--yellow);
+
+}
+
+.hero {
+    display: inline-block;
+    width: 100%;
+    height: calc(100vh - 150px);
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    filter: grayscale(100%) opacity(40%);
+}
+
+.hero .title {
+    margin-top: calc(50vh - 150px);
+    margin-left: 70px;
+}
+
+.hero span {
+    font-family: 'Hind', sans-serif;
+    font-weight: normal;
+    font-size: 24px;
+    color: var(--white);
+    margin: 10px 0 0 0;
+    padding: 0;
+}
+
+.bio {
+    margin-top: 96px;
+    display: flex;
+}
+
+.bio img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 400px;
+}
+
+.bio h2 {
+    text-align: left;
+}
+
+.bio .content {
+    flex-grow: 1;
+    margin-left: 64px;
+}
+
+.bio .content p {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 24px;
+}
+
+.bio .content a {
+    display: block;
+}
+
+.bands ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.band {
+    width: calc(50% - 20px);
+    height: 360px;
+    margin-bottom: 32px;
+    text-align: center;
+    position: relative;
+}
+
+.band::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%) opacity(20%);
+}
+
+.band.kazkanzie::before {
+    background-image: url(../images/kazkanzie.jpg);
+}
+
+.band.baluchon::before {
+    background-image: url(../images/baluchon.jpg);
+}
+
+.band.tango::before {
+    background-image: url(../images/aymerick-accordeon.jpg);
+}
+
+.band.kaleidoscope::before {
+    background-image: url(../images/kaleidoscope.jpg);
+}
+
+.band a {
+    display: block;
+    border: 2px solid transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.band a:hover {
+    text-decoration: none;
+    border: 2px solid var(--yellow);
+    border-radius: 4px;
+}
+
+.band h3 {
+    margin: 64px 0 16px 0;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.band .description {
+    padding: 20px;
+    color: var(--white);
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.band .discover {
+    font-weight: 700;
+    margin-top: auto;
+    margin-bottom: 32px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 64px;
+    font-size: 18px;
+    line-height: 29px;
+}
+
+.table-header {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+.table-row {
+    display: flex;
+    border-bottom: 1px solid #444444;;
+}
+
+.table-row:hover {
+    background-color: #222222;
+}
+
+.table-cell {
+    /* background: green; */
+    width: 200px;
+    padding: 10px;
+}
+
+.table-cell.event-cell {
+    flex-grow: 1;
+    /* background: purple; */
+}
+
+.table-cell.more-cell {
+    margin-left: auto;
+    text-align: right;
+    color: var(--yellow);
+}
+
+
+.lessons {
+    margin-top: 96px;
+    display: flex;
+}
+
+.lessons-img {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 560px;
+    height: 400px;
+    background-image: url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.lessons h2 {
+    text-align: left;
+}
+
+.lessons .content {
+    flex-grow: 1;
+    padding-left: 48px;
+}
+
+.lessons .content p {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 24px;
+}
+
+.lessons-contact {
+    display: inline-block;
+    color: var(--dark-gray);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: var(--yellow);
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    font-size: 12px;
+    line-height: 19px;
+    transition: background-color 200ms ease-in-out;
+}
+
+.lessons-contact:hover {
+    text-decoration: none;
+    background-color: var(--orange);
+}
+
+.scores ul {
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    background: var(--light-gray);
+    width: 300px;
+    height: 130px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 14px;
+    font-weight: 900;
+    display: flex;
+    flex-direction: column;
+}
+
+.score h4 {
+    color: var(--yellow);
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 4px;
+}
+
+.score-download {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: #000000;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: auto;
+    color: var(--dark-gray);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+    transition: background-color 200ms ease-in-out;
+    font-size: 12px;
+}
+
+.score-download:hover {
+    background-color: var(--orange);
+    text-decoration: none;
+}
+
+.videos-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.video {
+    background: var(--light-gray);
+    width: 380px;
+    margin: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.video-cover {
+    width: 100%;
+    height: 200px;
+}
+
+.video-title {
+    padding: 16px 16px;
+    font-size: 28px;
+    line-height: 32px;
+}
+
+.video-description {
+    padding: 0 16px 16px 16px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--white);
+    margin-top: auto;
+}
+
+.files-list {
+    display: flex;
+}
+
+.file {
+    display: flex;
+    align-items: center;
+    background-color: var(--light-gray);
+    padding: 20px 16px;
+    margin: 0 10px;
+    flex: 1 1 0px;
+}
+
+.file h4 {
+    font-weight: 700;
+    color: var(--white);
+    margin-right: 10px;
+}
+
+.file a {
+    display: inline-block;
+    background-color: var(--yellow);
+    padding: 10px;
+    border-radius: 20px;
+    color: var(--dark-gray);
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: auto;
+    transition: background-color 200ms ease-in-out;
+    text-align: center;
+    font-size: 12px;
+    line-height: 19px;
+    height: 17px;
+}
+
+.file a:hover {
+    background-color: var(--orange);
+    text-decoration: none;
+}
+
+.contact {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--light-gray);
+    margin: 0;
+    padding-bottom: 60px;
+}
+
+.contact h2 {
+    padding: 20px 0;
+}
