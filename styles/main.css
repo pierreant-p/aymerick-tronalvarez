@@ -541,10 +541,12 @@ ul {
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
+        margin-top: 16px;
     }
 
     .nav {
         margin-top: 10px;
+        margin-bottom: 8px;
     }
 
     .hero .title {
@@ -630,7 +632,7 @@ ul {
         margin-left: 138px;
         text-align: unset;
     }
- 
+
    .table-cell::before {
         display: inline-block;
         width: 120px;
@@ -650,6 +652,93 @@ ul {
 
     .event-cell::before {
         content: "Évènement";
+    }
+
+}
+
+@media (max-width: 640px) {
+    .wrapper {
+        padding: 0 16px;
+    }
+
+    .nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav li {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .hero {
+        margin-top: 16px;
+        height: unset;
+    }
+
+    .hero::before {
+        width: calc(100% + 32px);
+        left: -16px;
+    }
+
+    h1 {
+        font-size: 24px;
+        letter-spacing: -0.5px;
+        line-height: 62px;
+    }
+
+    .hero span {
+        font-size: 16px;
+    }
+
+
+    .hero .title {
+        margin-top: 48px;
+        margin-bottom: 48px;
+        margin-left: 20px;
+    }
+
+    .bio {
+        margin-top: 48px;
+    }
+
+    .bio h2 {
+        display: none;
+    }
+
+    .bio content p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+
+    .tracks {
+        align-items: center;
+    }
+
+    .track {
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
+
+    .scores ul {
+        flex-direction: column;
+    }
+
+    .video {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .video-cover {
+        width: 100%;
+    }
+
+    .video-meta {
+        width: 100%;
+    }
+
+    .table-cell {
+        width: unset;
     }
 
 }
