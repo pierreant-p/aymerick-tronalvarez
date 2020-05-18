@@ -6,6 +6,7 @@
     --light-gray: #303134;
 }
 
+
 * {
     margin: 0;
     padding: 0;
@@ -306,20 +307,37 @@ ul {
 }
 
 .table-cell {
-    /* background: green; */
-    width: 200px;
+    width: 230px;
     padding: 10px;
 }
 
 .table-cell.event-cell {
     flex-grow: 1;
-    /* background: purple; */
 }
 
 .table-cell.more-cell {
     margin-left: auto;
     text-align: right;
     color: var(--yellow);
+}
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+}
+
+.track {
+    display: flex;
+    margin-top: 8px;
+}
+
+.track-title {
+    margin-left: 16px;
+    padding-top: 8px;
+}
+
+.track audio {
+    width: 300px;
 }
 
 
@@ -507,4 +525,131 @@ ul {
 
 .contact h2 {
     padding: 20px 0;
+}
+
+
+@media (max-width: 1024px) {
+    .wrapper {
+        padding: 0px 48px;
+    }
+
+    .table-cell {
+        padding: 4px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav {
+        margin-top: 10px;
+    }
+
+    .hero .title {
+        margin-top: calc(50vh - 220px);
+        margin-left: 51px;
+    }
+
+    .bio img {
+        display: none;
+    }
+
+    .bio .content {
+        margin-left: 0;
+    }
+
+    .band {
+        width: 100%;
+    }
+
+    .lessons {
+        flex-direction: column;
+    }
+
+    .lessons-img {
+        width: 100%;
+    }
+
+    .lessons .content {
+        padding: 0;
+    }
+
+    .lessons h2 {
+        text-align: center;
+        margin-top: 16px;
+    }
+
+    .videos-list {
+        flex-direction: column;
+    }
+
+    .video {
+        flex-direction: row;
+        width: 100%;
+        margin: 16px 0;
+    }
+
+    .video-cover {
+        width: 50%;
+    }
+
+    .video-meta {
+        width: 50%;
+    }
+
+    .video-title {
+        line-height: 24px;
+        font-size: 18px;
+    }
+
+    .video-descrption {
+        margin-top: -8px;
+    }
+
+    .table-row {
+        flex-direction: column;
+        background-color: var(--light-gray);
+        border-bottom: none;
+        margin-bottom: 8px;
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .table-header {
+        display: none;
+    }
+
+    .table-cell {
+        width: 100%;
+        padding: 2px 0;
+    }
+
+    .table-cell.more-cell {
+        margin-left: 138px;
+        text-align: unset;
+    }
+ 
+   .table-cell::before {
+        display: inline-block;
+        width: 120px;
+        margin-right: 16px;
+        text-align: right;
+        color: var(--yellow);
+        font-weight: 700;
+    }
+
+    .band-cell::before {
+        content: "Groupe";
+    }
+
+    .date-cell::before {
+        content: "Date";
+    }
+
+    .event-cell::before {
+        content: "Évènement";
+    }
+
 }
