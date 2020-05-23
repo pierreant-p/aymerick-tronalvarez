@@ -527,6 +527,11 @@ ul {
     padding: 20px 0;
 }
 
+.address {
+    padding: 10px 0;
+    line-height: 16px;
+}
+
 
 @media (max-width: 1024px) {
     .wrapper {
