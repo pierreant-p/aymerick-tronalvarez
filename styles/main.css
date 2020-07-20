@@ -321,6 +321,19 @@ ul {
     color: var(--yellow);
 }
 
+.music-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.tracks-wrapper, .buy-wrapper {
+    width: 600px;
+    background: var(--light-gray);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 24px;
+}
+
 .tracks {
     display: flex;
     flex-direction: column;
@@ -338,6 +351,41 @@ ul {
 
 .track audio {
     width: 300px;
+}
+
+.albums .title {
+    font-size: 18px;
+    font-weight: 900;
+    display: inline-block;
+}
+
+.albums img {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.album-buy {
+    display: inline-block;
+    background-color: var(--yellow);
+    color: #000000;
+    border-radius: 15px;
+    padding: 10px;
+    margin-top: auto;
+    color: var(--dark-gray);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+    text-align: center;
+    width: 100px;
+    text-decoration: none;
+    transition: background-color 200ms ease-in-out;
+    font-size: 12px;
+    margin-left: 24px;
+}
+
+.album-buy:hover {
+    background-color: var(--orange);
+    text-decoration: none;
 }
 
 
@@ -541,6 +589,25 @@ ul {
     .table-cell {
         padding: 4px 0;
     }
+
+    .music-wrapper {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .tracks-wrapper,
+    .buy-wrapper {
+        width: unset;
+    }
+
+    .tracks {
+        align-items: center;
+    }
+
+    .track {
+        flex-direction: column;
+        margin-bottom: 16px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -714,15 +781,6 @@ ul {
     .bio content p {
         font-size: 16px;
         line-height: 26px;
-    }
-
-    .tracks {
-        align-items: center;
-    }
-
-    .track {
-        flex-direction: column;
-        margin-bottom: 16px;
     }
 
     .scores ul {
